@@ -43,8 +43,8 @@ $certScriptBlock = {
     $dt.Columns.Add("SANs", [string])              | Out-Null
 
     $certStores = @(
-        "LocalMachine\My", "LocalMachine\WebHosting", "LocalMachine\Root",
-        "LocalMachine\CA", "LocalMachine\TrustedPeople", "LocalMachine\TrustedPublisher"
+        "My", "WebHosting", "Root",
+        "CA", "TrustedPeople", "TrustedPublisher"
     )
 
     foreach ($storeName in $certStores) {
